@@ -1,0 +1,78 @@
+title = "Grunt Demo"
+url = "/"
+layout = "default"
+
+[demoTodo]
+max = 3
+==
+<?php
+function onTest()
+{
+  $value1 = post('value1');
+  $value2 = post('value2');
+  $operation = post('operation');
+
+  switch ($operation) {
+    case '+':
+      $this['result'] = $value1 + $value2;
+      break;
+
+    case '-':
+      $this['result'] = $value1 - $value2;
+      break;
+
+    case '*':
+      $this['result'] = $value1 * $value2;
+      break;
+
+    default:
+      $this['result'] = $value1 / $value2;
+      break;
+  }
+}
+?>
+==
+<div class="jumbotron">
+  <div class="container">
+    <h1>The demo</h1>
+    <p>This is the <a href="https://octobercms.com">October CMS</a> demo theme that explores the core features. You will find files used by this theme in the <strong>themes/demo</strong> directory of your installation.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="page-header">
+    <h2>AJAX Framework</h2>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Calculator</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-inline" data-request="onTest" data-request-update="calcresult: '#calcResult'">
+        <input class="form-control" type="text" value="15" name="value1">
+        <select class="form-control" name="operation" style="width: 70px">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+        </select>
+        <input class="form-control" type="text" value="5" name="value2">
+        <button class="btn btn btn-primary" type="submit">Calculate</button>
+      </form>
+    </div>
+    <div class="panel-footer" id="calcResult">
+      {% partial 'calcresult' %}
+    </div>
+  </div>
+
+  <div class="page-header">
+    <h2>Demo Plugin</h2>
+  </div>
+
+  <div>
+    {% component 'demoTodo' %}
+  </div>
+
+</div>

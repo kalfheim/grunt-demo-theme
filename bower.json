@@ -1,0 +1,19 @@
+{
+  "name": "grunt-test",
+  "version": "0.0.0",
+  "authors": [
+    "krisawzm <kristoffer.alfh@gmail.com>"
+  ],
+  "description": "foo",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0"
+  }
+}
