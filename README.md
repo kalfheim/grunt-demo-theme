@@ -4,7 +4,7 @@ Because a theme in OctoberCMS is defined as files, it's super easy to use any ta
 
 OctoberCMS ships with a feature called the combiner. First and foremost this is a feature which concatenates CSS or JS files, but it can also compile Less. This is a great feature, but if you need more power, utilizing a task runner is a great option.
 
-This example focuses on Grunt, but if you prefer Gulp, you could just as easy use that. You could even use Laravel Elixir (right? @todo)
+This example focuses on Grunt, but if you prefer Gulp, you could just as easy use that.
 
 Bower is used to install front end packages.
 
