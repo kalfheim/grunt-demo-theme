@@ -6,7 +6,7 @@ OctoberCMS ships with a feature called the combiner. First and foremost this is 
 
 This example focuses on Grunt, but if you prefer Gulp, you could just as easy use that. You could even use Laravel Elixir (right? @todo)
 
-Bower is used to handle front end dependencies.
+Bower is used to install front end packages.
 
 ## Installation
 
